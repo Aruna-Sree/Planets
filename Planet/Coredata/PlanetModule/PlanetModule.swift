@@ -198,14 +198,7 @@ class PlanetModule {
             object?.setValuesForKeys(dictionary!)
         }
     }
-    
-    func addPlanetEntity(value: String) {
-        var object:Planet? = getEntity(entityName: "Planet", columnName: "name", value: value) as? Planet
-        if object == nil {
-            object =  NSEntityDescription.insertNewObject(forEntityName: "Planet", into: managedObjectContext) as? Planet
-        }
-        object?.name = value
-    }
+
     //MARK: Get all records/particular record of entity with predicate from DB.
     //Get Entity witk key and value
     func getEntity(entityName:String, columnName:String, value:String) -> NSManagedObject? {

@@ -16,9 +16,9 @@ public class DataHelper: NSObject {
         PlanetModule.sharedInstance.saveContext()
     }
     
+    //Saving only name as per requirement instead of whole data coming from API request
     private func createPhotoEntityFrom(dictionary: [String: AnyObject]) {
         if dictionary["name"] != nil {
-//            PlanetModule.sharedInstance.addPlanetEntity(value: dictionary["name"] as! String)
             PlanetModule.sharedInstance.addEntity(entityName: "Planet", dictionary: ["name":dictionary["name"] as! String], key: "name", value: dictionary["name"] as? String)
         }
     }

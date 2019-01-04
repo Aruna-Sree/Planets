@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    // Getting previously stored data from DB
     func getPlanetDataFromDB() {
         planetsList = PlanetModule.sharedInstance.getAllRecordsOfEntityWithPredicate(entityName: "Planet", predicate: nil) as! [Planet]
         planetsTableView.reloadData()

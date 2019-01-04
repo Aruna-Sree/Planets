@@ -12,5 +12,11 @@ Designed 1 screen
 Class Name `Planet` holds all the details of the Planet.
 
 ## For Coredata :
+1. PlanetModule class maintains Coredata contexts, coordinators and data saving,fetching into Coredata.
 
+## Networking:
+1. APIManager maintains API requests and Callbacks.
 
+## Output for the app
+![Image](./1.png)
+![Image](./2.png)

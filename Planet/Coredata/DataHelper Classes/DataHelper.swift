@@ -12,12 +12,12 @@ import CoreData
 public class DataHelper: NSObject {
  
     public func addPlanetsDataToDB(array: [[String: AnyObject]]) {
-        _ = array.map{self.createPhotoEntityFrom(dictionary: $0)}
+        _ = array.map{self.createPlanetEntityFrom(dictionary: $0)}
         PlanetModule.sharedInstance.saveContext()
     }
     
     //Saving only name as per requirement instead of whole data coming from API request
-    private func createPhotoEntityFrom(dictionary: [String: AnyObject]) {
+    private func createPlanetEntityFrom(dictionary: [String: AnyObject]) {
         if dictionary["name"] != nil {
             PlanetModule.sharedInstance.addEntity(entityName: "Planet", dictionary: ["name":dictionary["name"] as! String], key: "name", value: dictionary["name"] as? String)
         }

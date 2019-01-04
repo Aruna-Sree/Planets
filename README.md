@@ -6,7 +6,7 @@ Designed 1 screen
 
 ## Elements :
 1. Planet Screen
-    1. List of Planets by getting from API request![https://swapi.co/api/planets] and stroing in coredata for offline aupport as well.
+    1. List of Planets by getting from [API request](https://swapi.co/api/planets) and stroing in coredata for offline aupport as well.
 
 ## Model used:
 Class Name `Planet` holds all the details of the Planet.
